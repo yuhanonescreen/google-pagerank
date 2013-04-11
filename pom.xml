@@ -4,7 +4,7 @@
  <groupId>google</groupId>
  <artifactId>pagerank</artifactId>
  <packaging>jar</packaging>
- <version>1.0.2</version>
+ <version>1.0.2.2</version>
  <name>google-pagerank</name>
  
  <properties>
@@ -36,6 +36,27 @@
    <scope>test</scope>
    </dependency>
  </dependencies>
+
+
+  <build>
+   <extensions>
+	<extension>
+	        <groupId>org.springframework.build.aws</groupId>
+        	<artifactId>org.springframework.build.aws.maven</artifactId>
+	        <version>3.0.0.RELEASE</version>
+	</extension>
+    </extensions>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
  
 </project>
 
